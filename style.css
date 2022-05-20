@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    /*Paleta de Cores*/
+    
+    --pageHeaderColor: #0623c1;;
+    --buttonColor: rgb(50, 50, 248);
+    --bodyColor:#f8f8e5d4; 
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    
+    background-color: beige;
+}
+
+.formularioTitulo{
+    border-style: solid;
+    border-color: rgba(48, 9, 245, 0.162);
+    border-radius: 20px;
+}
+
+.formularioTitulo h1{
+    padding: 5px;
+    font-weight: bold;
+}
+
+
+
+.conteudoPageHeader{
+    height: 30vh;
+    padding-bottom: 10px;
+    
+    background-color: var(--pageHeaderColor);
+    background-image: linear-gradient(180deg, #0623c1 0%, #141ba9 50%, #0d0d3e 100%);
+
+    color: white;
+
+    font-weight: bold;
+
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerGeral{
+    
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+   
+    
+}
+
+.formularioTitulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.containerFormulario{
+    height: 100%;
+    width: 60%;
+    box-shadow: 
+    
+    /*Direita*/
+    4px 0 4px -2px rgba(0, 0, 0, 0.125),
+    /*Esquerda*/
+    -4px 0 4px -2px rgba(0, 0, 0, 0.125);
+     /*Bottom*/
+    
+    display: flex;
+    justify-content: center;
+  
+    padding: 3rem;
+    background-color: white;
+   
+    
+}
+
+.containerInputs{
+    width: 55vw;
+    
+}
+
+
+
+.conteudoInputs{
+    margin-bottom: 1rem;
+    
+}
+
+.conteudoInputs input:hover{
+    background-color: rgba(246, 243, 243, 0.849)
+
+}
+
+
+
+.conteudoInputs label{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.containerTitulo h6{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.containerSexoInputs{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+    padding-left: 25px;
+     
+}
+
+
+
+.habilitarPainel{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: flex-start;
+    padding-left: 25px;
+    flex-direction: column;
+    background-color: white;
+
+
+}
+
+.containerPainel{
+    display: none;
+}
+
+textarea:hover{
+    background-color: rgba(246, 243, 243, 0.849)
+}
+
+.containerBotao{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+
+    
+}
+.containerBotao button{
+    width: 32%;
+    border-radius: 1rem;
+    padding: 5px;
+    
+    
+}
+
+.tituloExibicao{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    
+    background-color: var(--buttonColor);
+    border-radius: 1rem;
+
+}
+.tituloExibicao h4{
+    padding: 5px;
+}
+
+.containerExibicao{
+    display: none;
+    margin-top: 1.5rem;
+    
+    padding: 1rem;
+    border-style: solid;
+    border-color: black;
+    border-radius: 0.4rem;
+}
+
+.conteudoExibicao li{
+    width: 100%;
+}
+
+#exampleModalLongTitle{
+    width: 100%;
+    text-align: center;
+    
+}
+
+
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+}
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+

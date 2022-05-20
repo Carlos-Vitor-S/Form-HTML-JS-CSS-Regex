@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+   
+</head>
+<body>
+    <div class="pagaHeader">
+        <div class="conteudoPageHeader">
+            <h1 class="display-4">Inventione</h1>
+            <h2 class="lead">Carlos Vitor Oliveira da Silva</h2>
+        </div>
+    </div>
+    
+    <div class="containerGeral">
+        <div class="containerFormulario">
+            
+            <form action="#">
+                <div class="formularioHeader">
+                    <div class="formularioTitulo">
+                        <h1>Formulário Cadastro</h1>
+                    </div>
+                </div>
+
+                <div class="containerInputs">
+
+                    <div class="conteudoInputs" >
+                        <label for="nome" class="form-label">Nome: </label>
+                        <input type="text" class="form-control" id="nome" aria-describedby="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="conteudoInputs  ">
+                        <label for="idade" class="form-label">Idade: </label>
+                        <input type="number" class="form-control" id="idade" aria-describedby="idade" placeholder="Digite sua idade" min="1" max="130" oninput="validity.valid||(value='');" required>
+                    </div>
+
+                    <div class="conteudoInputs " >
+                        <label for="nascimento" class="form-label">Data Nascimento</label>
+                        <input type="date" class="form-control" id="nascimento" aria-describedby="nascimento" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required>
+                    </div>
+
+                    
+                </div>
+
+                <div class="containerCheckbox">
+                    <div class="containerTitulo">
+                        <h6>Sexo:</h6>   
+                    </div>
+                    <div class="containerSexoInputs">
+                        <div class="sexoInput" id="masculino">
+                            
+                            <input class="form-check-input" type="radio" value="Masculino" name="escolher" id="masculino" >
+                            <label class="form-check-label" for="flexRadioDefault1">
+                            Masculino
+                        </div>
+                        <div class="sexoInput">
+                            <input class="form-check-input" type="radio" value="Feminino" name="escolher" id="feminino">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                            Feminino
+                            
+                        </div>
+
+                    </div>
+                    <div class="habilitarPainel">
+                        <input class="form-check-input" type="checkbox" name="textoString" id="habilitarPainel" required>
+                        <label class="form-check-label" for="habilitarPainel">
+                        Habilitar Segundo Painel
+                    </div>
+                </div>
+                <div class="containerPainel" >
+                    <label for="textoPainel" ></label>
+                    <textarea class="form-control" rows="5" id="textoPainel" placeholder="Digite aqui..."></textarea>
+                </div>
+
+                <div class="containerBotao">
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="botaoApresentar">
+                        Apresentar
+                    </button>
+                </div>
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">   
+                                    <li class="list-group-item active ">Cadastro com Sucesso! </li>
+                                </h5>    
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            </div>
+                            <div class="modal-body">
+                                    <ul class="list-group "> 
+                                        <li class="list-group-item" id="listarNome">Nome: </li>
+                                        <li class="list-group-item" id="listarSexo">Sexo: </li>
+                                        <li class="list-group-item" id="listarIdade">Idade: </li>
+                                        <li class="list-group-item" id="listarNascimento">Data de Nascimento: </li>
+                                        <li class="list-group-item" id="listarTotalPalavras">Total Palavras: </li>
+                                    </ul>
+                            </div>
+                            <br>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>
