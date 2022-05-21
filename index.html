@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Desafio Inventione</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 
@@ -33,17 +33,17 @@
 
                     <div class="conteudoInputs" >
                         <label for="nome" class="form-label">Nome: </label>
-                        <input type="text" class="form-control" id="nome" aria-describedby="nome" placeholder="Digite seu nome" required>
+                        <input type="text" class="form-control" id="nome" name="nome" aria-describedby="nome" placeholder="Digite seu nome" required>
                     </div>
 
                     <div class="conteudoInputs  ">
                         <label for="idade" class="form-label">Idade: </label>
-                        <input type="number" class="form-control" id="idade" aria-describedby="idade" placeholder="Digite sua idade" min="1" max="130" oninput="validity.valid||(value='');" required>
+                        <input type="number" class="form-control" id="idade" name="idade" aria-describedby="idade" placeholder="Digite sua idade" min="1" max="130" oninput="validity.valid||(value='');" required>
                     </div>
 
                     <div class="conteudoInputs " >
                         <label for="nascimento" class="form-label">Data Nascimento</label>
-                        <input type="date" class="form-control" id="nascimento" aria-describedby="nascimento" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required>
+                        <input type="date" class="form-control" id="nascimento" name="nascimento" aria-describedby="nascimento" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}" required>
                     </div>
 
                     
@@ -56,12 +56,12 @@
                     <div class="containerSexoInputs">
                         <div class="sexoInput" id="masculino">
                             
-                            <input class="form-check-input" type="radio" value="Masculino" name="escolher" id="masculino" >
+                            <input class="form-check-input" type="radio" value="Masculino" name="sexo" id="masculino" >
                             <label class="form-check-label" for="flexRadioDefault1">
                             Masculino
                         </div>
                         <div class="sexoInput">
-                            <input class="form-check-input" type="radio" value="Feminino" name="escolher" id="feminino">
+                            <input class="form-check-input" type="radio" value="Feminino" name="sexo" id="feminino">
                             <label class="form-check-label" for="flexRadioDefault1">
                             Feminino
                             
@@ -76,41 +76,32 @@
                 </div>
                 <div class="containerPainel" >
                     <label for="textoPainel" ></label>
-                    <textarea class="form-control" rows="5" id="textoPainel" placeholder="Digite aqui..."></textarea>
+                    <textarea class="form-control" rows="5" id="textoPainel" name="TextoArea" placeholder="Digite aqui..."></textarea>
                 </div>
 
                 <div class="containerBotao">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="botaoApresentar">
+                    <button type="submit" class="btn btn-primary"  id="botaoApresentar">
                         Apresentar
                     </button>
                 </div>
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle">   
-                                    <li class="list-group-item active ">Cadastro com Sucesso! </li>
-                                </h5>    
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            </div>
-                            <div class="modal-body">
-                                    <ul class="list-group "> 
-                                        <li class="list-group-item" id="listarNome">Nome: </li>
-                                        <li class="list-group-item" id="listarSexo">Sexo: </li>
-                                        <li class="list-group-item" id="listarIdade">Idade: </li>
-                                        <li class="list-group-item" id="listarNascimento">Data de Nascimento: </li>
-                                        <li class="list-group-item" id="listarTotalPalavras">Total Palavras: </li>
-                                    </ul>
-                            </div>
+                
+                <div class="containerModal">
+                    <div class="conteudoModal">
+                        <ul class="list-group ">
+                            <li class="list-group-item active" id="tituloConteudoModal"><h4>Cadastrado com sucesso!</h4></li>
                             <br>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                            </div>
-                        </div>
+                            <li class="list-group-item" id="listarNome">Nome: </li>
+                            <li class="list-group-item" id="listarSexo">Sexo: </li>
+                            <li class="list-group-item" id="listarIdade">Idade: </li>
+                            <li class="list-group-item" id="listarNascimento">Data de Nascimento: </li>
+                            <li class="list-group-item" id="listarTotalPalavras">Total Palavras: </li>
+                        </ul>
+                        <div class="containerBotaoFechar">
+                            <button type="button" class="btn btn-danger" id="botaoFecharModal">Fechar</button>
+                        </div> 
                     </div>
                 </div>
+                                      
             </form>
         </div>
     </div>
