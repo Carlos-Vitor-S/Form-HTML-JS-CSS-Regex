@@ -101,7 +101,7 @@ function contarTexto(contadorTexto){
 function contarExcessoesTextuais(textoExcessoes){
 
     // \d+ = digitos numericos
-    // \[%#@$&*'"~^´`] = caracteres especiais
+    // \[%#@$&*'"~^´`.,] = caracteres especiais
     // \b[b-df-hj-np-tv-z]+\b = consoantes
 
     textoExcessoes.split(/[,.?!\s/]+/)
