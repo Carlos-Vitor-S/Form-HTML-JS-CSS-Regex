@@ -101,12 +101,12 @@ function contarTexto(contadorTexto){
 function contarExcessoesTextuais(textoExcessoes){
 
     // \d+ = digitos numericos
-    // \[%#@$&*'"~^´`.,] = caracteres especiais
+    // \[%#@$&*'"~^´`] = caracteres especiais
     // \b[b-df-hj-np-tv-z]+\b = consoantes
 
     textoExcessoes.split(/[,.?!\s/]+/)
   
-    textoExcessoes = textoExcessoes.match(/\d+|[%#@$&*'"~^`.,]+|\b[b-df-hj-np-tv-z]+\b/gi)
+    textoExcessoes = textoExcessoes.match(/\d+|[%#@$&*'"~^`><}{]+|\b[b-df-hj-np-tv-z]+\b/gi)
 
     //retorna o total de excessoes
     
