@@ -21,15 +21,15 @@ document.querySelector("form").addEventListener("submit", (evento)=>{
     const formulario = evento.target
     var texto1 = document.querySelector("#textoPainel").value
    
-    const formNascimento = Intl.DateTimeFormat("pt-BR", {timeZone: "UTC",}).format(new Date(formulario.nascimento.value));
+    const formNascimento = Intl.DateTimeFormat("pt-BR", {timeZone: "UTC",}).format(new Date(formulario.nascimento.value))
     
     document.querySelector("#listarNome").innerHTML = `Nome: ${formulario.nome.value}`  
-    document.querySelector("#listarSexo").innerHTML = `Sexo: ${formulario.idade.value}` 
-    document.querySelector("#listarIdade").innerHTML = `Sexo: ${formulario.sexo.value}`
+    document.querySelector("#listarSexo").innerHTML = `Sexo: ${formulario.sexo.value}` 
+    document.querySelector("#listarIdade").innerHTML = `Idade: ${formulario.idade.value}`
     document.querySelector("#listarNascimento").innerHTML = `Data Nascimento: ${formNascimento}`
     //document.querySelector("#listarTotalPalavras").innerHTML = `Total de Palavras: ${contarTexto(formulario.TextoArea.value)}`
 
-    var totalTexto = contarTexto(formulario.texto.value)
+    var totalTexto = contarTexto(texto1)
     document.querySelector("#listarTotalPalavras").innerHTML = `Total de Palavras: ${totalTexto}`
     
     if (totalTexto!=null){
@@ -38,15 +38,11 @@ document.querySelector("form").addEventListener("submit", (evento)=>{
         document.querySelector("#listarTotalPalavras").innerHTML = `Total de Palavras: ${totalTexto - totalExcessoes}`
     }
 
-
     
-    
-   
-
 })
 
-/*checkBoxPainel.addEventListener("click", ()=>{
-   
+checkBoxPainel.addEventListener("click", ()=>{
+    /*Evento criado ao ativar/desativar o checkbox fazendo aparecer o painel da area de texto*/
     if(checkBoxPainel.checked){
         divPainel.style.display = "block"
     }
@@ -55,15 +51,16 @@ document.querySelector("form").addEventListener("submit", (evento)=>{
     }
 
 })
-*/
+
 botaoApresentar.addEventListener("click" , ()=>{
-     /*Evento criado ao ativar/desativar o checkbox fazendo aparecer o painel da area de texto*/
-    if(checkBoxPainel.checked){
-        divPainel.style.display = "block"
+     
+    if(containerModal.style.display != "none"){
+        containerModal.style.display = "none"
     }
-    else {
-        divPainel.style.display = "none"
+    else{
+        containerModal.style.display = "flex"
     }
+    
 })
 
 
@@ -76,7 +73,7 @@ formularioGeral.addEventListener("submit" , ()=>{
     else{
         containerModal.style.display = "flex"
     }
-    formulario.reset()
+    
 })
 
 
@@ -109,7 +106,7 @@ function contarExcessoesTextuais(textoExcessoes){
 
     textoExcessoes.split(/[,.?!\s/]+/)
   
-    textoExcessoes = textoExcessoes.match(/\d+|[%#@$&*'"~^`]+|\b[b-df-hj-np-tv-z]+\b/gi)
+    textoExcessoes = textoExcessoes.match(/\d+|[%#@$&*'"~^`.,]+|\b[b-df-hj-np-tv-z]+\b/gi)
 
     //retorna o total de excessoes
     
